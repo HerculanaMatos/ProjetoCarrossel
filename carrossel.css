@@ -1,0 +1,79 @@
+h1{
+    text-align: center;
+    font-size: 32px;
+    background-color: rgb(21, 19, 19);
+    text-decoration: floralwhite;
+    color: aliceblue;
+    vertical-align: text-top;
+}
+body{
+    background: rgb(117, 94, 117);
+}
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: padding-box;
+    height: 100vw;
+    width: 100vw;
+    background: rgb(128, 113, 113);
+}
+
+.container{
+    position:absolute;
+    height: 620px;
+    width: 635px;
+    border-radius: 20px;
+    overflow: hidden;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    box-shadow: 10px 10px 5px 0px black;
+    
+
+}
+.container slide img{
+    height: 100%;
+    width: 100%
+}
+.navegacao{
+    position: absolute;
+    bottom: 120px;
+    left: 350px;
+    display: flex;
+}
+.bar{
+    width: 15px;
+    height: 15px;
+    border: 2px solid white;
+    border-radius: 15px;
+    cursor: pointer;
+    transform: 5s ease;
+}
+.bar:hover{
+    background-color: white;
+
+}
+input{
+    display: none;
+}
+.slides{
+    display: flex;
+    width: 400%;
+    height: 100%;
+}
+.slide{
+    width: 25%;
+    transition: .6s;
+}
+#negro:checked~.s1{
+    margin-left: 0;
+}
+#indigena:checked~.s1{
+    margin-left: -20%;
+}
+#pardo1:checked~.s1{
+    margin-left: -40%;
+}
+#branco:checked~.s1{
+    margin-left: -60%;
+}
