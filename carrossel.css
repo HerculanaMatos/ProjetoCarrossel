@@ -1,79 +1,45 @@
-h1{
+header{
     text-align: center;
-    font-size: 32px;
-    background-color: rgb(21, 19, 19);
-    text-decoration: floralwhite;
-    color: aliceblue;
-    vertical-align: text-top;
+    background-color: violet;
+    font-size: 22px;
+    padding: 18px;
 }
 body{
-    background: rgb(117, 94, 117);
-}
-body{
-    margin: 0;
-    padding: 0;
-    box-sizing: padding-box;
-    height: 100vw;
-    width: 100vw;
-    background: rgb(128, 113, 113);
-}
-
-.container{
-    position:absolute;
-    height: 620px;
-    width: 635px;
-    border-radius: 20px;
-    overflow: hidden;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    box-shadow: 10px 10px 5px 0px black;
     
+    background-color: rgb(23, 14, 23);
+}
+.galeria{
+    overflow: hidden;
 
 }
-.container slide img{
-    height: 100%;
-    width: 100%
-}
-.navegacao{
-    position: absolute;
-    bottom: 120px;
-    left: 350px;
+.galeria > .galeria-fotos{
     display: flex;
-}
-.bar{
-    width: 15px;
-    height: 15px;
-    border: 2px solid white;
-    border-radius: 15px;
-    cursor: pointer;
-    transform: 5s ease;
-}
-.bar:hover{
-    background-color: white;
+    flex-wrap: nowrap;
+    width: 100%;
+    transition: all 500ms ease;
 
 }
-input{
-    display: none;
+
+.galeria > .galeria-fotos > .fotos-item{
+    flex: 0 0 auto;
+    width: 100%;
 }
-.slides{
-    display: flex;
-    width: 400%;
-    height: 100%;
+.galeria > input:nth-child(1):checked ~ .galeria-fotos{
+    transform: translateX(0%);
 }
-.slide{
-    width: 25%;
-    transition: .6s;
+
+.galeria > input:nth-child(2):checked ~ .galeria-fotos{
+    transform: translateX(-100%);
 }
-#negro:checked~.s1{
-    margin-left: 0;
+.galeria > input:nth-child(3):checked ~ .galeria-fotos{
+    transform: translateX(-200%);
+} 
+.galeria > input:nth-child(4):checked ~ .galeria-fotos{/*checked~ seleciona os irmaos da galeria*/
+    transform: translateX(-300%);
 }
-#indigena:checked~.s1{
-    margin-left: -20%;
-}
-#pardo1:checked~.s1{
-    margin-left: -40%;
-}
-#branco:checked~.s1{
-    margin-left: -60%;
+/*classe mae> classe filhas*/
+.galeria > .galeria-fotos > .fotos-item >.descricao{
+    text-align: center;
+    color: aliceblue;
+    font-size: 20px;
 }
